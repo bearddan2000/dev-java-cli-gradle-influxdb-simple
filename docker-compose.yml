@@ -1,0 +1,17 @@
+version: '3.7'
+
+services:
+  java-srv:
+    build: java-srv
+
+  db:
+    image: tutum/influxdb:latest
+    environment:
+      - ADMIN_USER="admin" 
+      - INFLUXDB_INIT_PWD="admin" 
+      - PRE_CREATE_DB="animal"
+    volumes:
+      - ./db/init_script.influxql:/usr/bin/influx
+    ports:
+      - 8083
+      - 8086

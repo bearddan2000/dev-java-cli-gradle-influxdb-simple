@@ -1,0 +1,5 @@
+CREATE DATABASE animal
+CREATE USER admin WITH PASSWORD 'admin'
+CREATE USER admin WITH PASSWORD 'admin'
+GRANT WRITE ON animal TO admin
+GRANT READ ON animal TO admin

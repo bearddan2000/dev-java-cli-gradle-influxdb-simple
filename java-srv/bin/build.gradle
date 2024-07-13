@@ -1,0 +1,14 @@
+apply plugin: 'java'
+apply plugin: 'application'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+  implementation "org.influxdb:influxdb-java:2.8"
+  implementation 'org.projectlombok:lombok:1.18.32'
+  annotationProcessor 'org.projectlombok:lombok:1.18.32'
+}
+
+mainClassName = "example.Main"
